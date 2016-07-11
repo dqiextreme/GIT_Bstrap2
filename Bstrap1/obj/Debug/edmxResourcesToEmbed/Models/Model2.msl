@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="mine_cms_1ModelStoreContainer" CdmEntityContainer="mine_cms_1Entities">
+    <EntitySetMapping Name="test_view1">
+      <EntityTypeMapping TypeName="mine_cms_1Model.test_view1">
+        <MappingFragment StoreEntitySet="test_view1">
+          <ScalarProperty Name="user" ColumnName="user" />
+          <ScalarProperty Name="viewN" ColumnName="viewN" />
+          <ScalarProperty Name="head" ColumnName="head" />
+          <ScalarProperty Name="body" ColumnName="body" />
+          <ScalarProperty Name="foot" ColumnName="foot" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="test_view2">
+      <EntityTypeMapping TypeName="mine_cms_1Model.test_view2">
+        <MappingFragment StoreEntitySet="test_view2">
+          <ScalarProperty Name="layout" ColumnName="layout" />
+          <ScalarProperty Name="view1" ColumnName="view1" />
+          <ScalarProperty Name="user" ColumnName="user" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

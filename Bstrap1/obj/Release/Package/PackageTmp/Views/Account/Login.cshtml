@@ -1,0 +1,44 @@
+﻿@model Bstrap2.Models.LoginModel
+@{
+ Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+<h2>Utilice una cuenta local para iniciar sesión.</h2>
+<hr />
+@using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl })) {
+@Html.AntiForgeryToken()
+@Html.ValidationSummary(true)
+    <div class="row" style="text-align:center;">
+    <div class="col-xs-12">
+            @Html.LabelFor(m => m.UserName)
+            @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", @style = "width:100%;", @placeholder = "Usuario" })
+            @Html.ValidationMessageFor(m => m.UserName)
+    </div>
+    <div class="col-xs-12">
+            @Html.LabelFor(m => m.Password)
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control", @style = "width:100%;", @placeholder = "Password" })
+            @Html.ValidationMessageFor(m => m.Password)
+    </div>
+    </div>
+    <hr />
+    <div class="row">
+    <div class="col-xs-12 col-sm-1">
+        @*@Html.CheckBoxFor(m => m.RememberMe, new { @class = "checkbox"})*@
+        @*<span class="label label-default">@Html.CheckBoxFor(m => m.RememberMe)Recordar Contraseña</span>*@
+        <label>@Html.CheckBoxFor(m => m.RememberMe)Recordar Contraseña</label>
+    </div>
+    <div class="col-xs-12 col-sm-9">
+        <input class="btn btn-default" type="submit" value="Iniciar sesión" />
+    </div>
+    </div>
+}
+
+<hr />
+
+@*<section class="social" id="socialLoginForm">
+    <h2>Usar otro servicio para iniciar sesión.</h2>
+    @Html.Action("ExternalLoginsList", new { ReturnUrl = ViewBag.ReturnUrl })
+</section>*@
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

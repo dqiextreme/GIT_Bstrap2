@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="Data Source=(LocalDb)\v11.0;Initial Catalog=aspnet-Bstrap2-20160513100433;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|\aspnet-Bstrap2-20160513100433.mdf" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\asoftware8\\Documents\\Visual\ Studio\ 2012\\Projects\\Bstrap2\\Bstrap1\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="test_linqsql1Entities-Web.config Connection String" description="test_linqsql1Entities Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="metadata=res://*/Models.Model1.csdl|res://*/Models.Model1.ssdl|res://*/Models.Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=(localdb)\PRUEBAS;initial catalog=test_linqsql1;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\asoftware8\\Documents\\Visual\ Studio\ 2012\\Projects\\Bstrap2\\Bstrap1\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='test_linqsql1Entities']/@connectionString" />
+  </parameter>
+</parameters>

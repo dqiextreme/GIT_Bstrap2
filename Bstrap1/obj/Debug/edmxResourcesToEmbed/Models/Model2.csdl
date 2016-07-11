@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="mine_cms_1Model" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="mine_cms_1Entities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="test_view1" EntityType="mine_cms_1Model.test_view1" />
+    <EntitySet Name="test_view2" EntityType="mine_cms_1Model.test_view2" />
+  </EntityContainer>
+  <EntityType Name="test_view1">
+    <Key>
+      <PropertyRef Name="user" />
+      <PropertyRef Name="viewN" />
+      <PropertyRef Name="head" />
+      <PropertyRef Name="body" />
+      <PropertyRef Name="foot" />
+    </Key>
+    <Property Name="user" Type="Int32" Nullable="false" />
+    <Property Name="viewN" Type="Int32" Nullable="false" />
+    <Property Name="head" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="body" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="foot" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="test_view2">
+    <Key>
+      <PropertyRef Name="user" />
+      <PropertyRef Name="view1" />
+      <PropertyRef Name="layout" />
+    </Key>
+    <Property Type="Int32" Name="user" Nullable="false" />
+    <Property Type="Int32" Name="view1" Nullable="false" />
+    <Property Type="String" Name="layout" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

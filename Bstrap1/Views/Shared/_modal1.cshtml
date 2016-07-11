@@ -1,0 +1,75 @@
+﻿<div class="container-fluid">
+    <div class="navbar navbar-fixed-top navbar-default">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".navbar-offcanvas" data-canvas="body">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand pull-right" href="#">
+                <img src="assets/img/logo-header.png" alt="Alternate Text for Image">
+            </a>
+        </div>
+
+        <div class="navbar-offcanvas offcanvas navmenu-fixed-left">
+            <a class="navmenu-brand" href="#">eServices</a>
+            <ul class="nav nav-justified">
+                <li><a href="#" data-toggle="modal" data-target="#modalSignup" data-backdrop="static">New Here?</a></li>
+                <li><a href="index.html">Services</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#modalLogin" data-backdrop="static">Sign In</a></li>
+            </ul>
+        </div>
+   </div>
+</div>
+
+<div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <p>
+                    <h3 class="modal-title" id="myModalLabel">Login to MyApplication</h3>
+                </p>
+            </div>
+
+                @*@using (Html.BeginForm("index", "home", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { role = "form", @class = "form-horizontal" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="form-group @Html.ValidationErrorFor(m => m.Username, "has-error has-feedback")">
+                        <div class="col-sm-12">
+                            @Html.FormTextBoxFor(p => p.Username, new { @class = "form-control" })
+                            @if (!Html.IsValid(m => m.Username))
+                            {
+                                <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                            }
+                            @Html.ValidationMessageFor(m => m.Username, null, new { @class = "help-block" })
+                        </div>
+                    </div>
+                    <div class="form-group @Html.ValidationErrorFor(m => m.Password, "has-error has-feedback")">
+                        <div class="col-sm-12">
+                            @Html.FormPasswordFor(p => p.Password, new { @class = "form-control" })
+                            @if (!Html.IsValid(m => m.Password))
+                            {
+                                <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                            }
+                            @Html.ValidationMessageFor(m => m.Password, null, new { @class = "help-block" })
+                        </div>
+                    </div>
+                    @Html.ValidationSummary(true, string.Empty, new { @class = "test" }, "span")
+                    <div class=" pull-right">
+                        <p>
+                            <button type="submit" class="btn btn-default">@Forms.ButtonSignin</button>
+                        </p>
+                        <br />
+                        <p>
+                            @Html.ActionLink("Forgot your username?", "ForgotUsername")
+                        </p>
+                        <p>
+                            @Html.ActionLink("Forgot your password?", "ForgotPassword")
+                        </p>
+                    </div>
+                }*@
+        </div>
+    </div>
+</div>
